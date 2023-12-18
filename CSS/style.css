@@ -1,0 +1,394 @@
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  margin-top: 75px;
+  color: #ccc;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  padding-right: 25px;
+}
+
+/*          BARRA DE NAVEGACIÓN         */
+
+.nav {
+  background-color: rgb(0, 13, 26);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.nav .contenedor-logo {
+  margin-left: 10px;
+  text-align: left;
+}
+.contenedor-logo img {
+  height: 100px;
+}
+.contenedor-opciones {
+  padding-right: 20px;
+}
+.perfil,
+.queVendemos,
+.contacto,
+.inicio,
+.informacion {
+  padding: 20px;
+  margin: 0 20px;
+  color: #ccc;
+}
+
+.botonAbrir,
+.botonCerrar {
+  display: none;
+}
+
+/*          COLOR DE FONDO          */
+
+.contenedor-fondo1 {
+  background-color: rgb(0, 13, 26);
+  padding: 10px 0px;
+}
+.contenedor-fondo2 {
+  background-color: rgb(0, 26, 50);
+  padding: 10px 0px;
+}
+
+/*          RESEÑA          */
+
+.contenedor-reseña {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.contenedor-titulo {
+  text-align: center;
+  padding: 20px;
+}
+.contenedor-texto {
+  display: flex;
+  align-items: center;
+}
+.contenedor-texto img {
+  padding-right: 18px;
+}
+
+.contenedor-texto__avalian {
+  display: flex;
+  align-items: center;
+}
+.contenedor-texto__avalian img {
+  padding-right: 18px;
+}
+
+/*          RESEÑA VENDEDOR         */
+
+.contenedor-vendedor {
+  margin: 0 80px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 8px 10px 1px rgb(0, 13, 26);
+  background-color: rgb(0, 13, 26);
+}
+.vendedor__img img {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/*          RESEÑA DE LO QUE SE VENDE         */
+
+.contenedor-venta1 {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 200px 200px;
+  grid-auto-rows: 200px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.contenedor-venta2 {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: 200px;
+  grid-auto-rows: 200px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.venta__grilla {
+  border: 1px solid #ccc;
+  background-color: rgb(0, 26, 50);
+  box-shadow: 0 3px 13px 1px rgb(255 255 255 / 10%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contenedor-venta1 img,
+.contenedor-venta2 img {
+  height: 148px;
+  width: 198px;
+  background-color: #ccc;
+}
+
+/*          VENTAS          */
+
+.grilla__informacion {
+  padding: 20px 35px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.informacion__texto {
+  padding: 0 40px;
+  text-align: center;
+  grid-column: 1 / 3;
+}
+
+.contenedor-img-info img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 60%);
+  background-color: #fff;
+}
+.contenedor-texto-info ul li {
+  margin: 15px 0;
+}
+
+/*          CONTACTO          */
+
+.boton-contacto {
+  --green: #1bfd9c;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(
+    to right,
+    rgba(27, 253, 156, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(27, 253, 156, 0.1) 100%
+  );
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4),
+    0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+.boton-contacto:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6),
+    0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+.boton-contacto:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    rgba(27, 253, 156, 0.1) 40%,
+    rgba(27, 253, 156, 0.1) 60%,
+    transparent 100%
+  );
+}
+.boton-contacto:hover:before {
+  transform: translateX(15em);
+}
+.contenedor-botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.contenedor-texto-contacto {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/*          IMAGENES          */
+
+.contenedor-img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contenedor-img img {
+  flex-direction: column;
+  width: 250px;
+  height: 150px;
+}
+
+/*          FOOTER          */
+
+.contenedor-footer {
+  bottom: 0;
+  text-align: center;
+  height: 60px;
+  padding: 10px;
+}
+.contenedor-footer a {
+  color: #ccc;
+  padding: 3px;
+}
+
+.contenedor-footer p a {
+  color: #0075fa;
+  padding: 3px;
+}
+
+/*      RESPONSIVE     */
+
+@media screen and (max-width: 960px) {
+  /*    RESEÑA VENTA    */
+  .contenedor-venta1 {
+    grid-template-columns: 200px 200px;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  /*    MENU HAMBURGUESA    */
+
+  .botonAbrir,
+  .botonCerrar {
+    display: block;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: #ccc;
+    font-size: 22px;
+    padding-right: 20px;
+  }
+
+  .contenedor-opciones {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100000px;
+    background-color: rgb(0, 13, 26);
+    padding: 15px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+  }
+
+  .contenedor-opciones.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .listaDeOpciones {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  /*    RESEÑA VENTA    */
+  .contenedor-venta1 {
+    grid-template-columns: 200px 200px;
+  }
+
+  .contenedor-venta2 {
+    grid-template-columns: 200px;
+  }
+
+  /*    CONTACTO    */
+  .contenedor-botones {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  /*    RESEÑA INICIO   */
+  .contenedor-texto,
+  .contenedor-texto__avalian {
+    flex-direction: column;
+  }
+
+  /*    RESEÑA VENDEDOR   */
+  .contenedor-vendedor {
+    flex-direction: column-reverse;
+    margin: 0 20px;
+    margin-bottom: 100px;
+  }
+
+  .texto-vendedor {
+    margin: 5px 8px;
+  }
+
+  /*    RESEÑA VENTA    */
+  .contenedor-venta1 {
+    grid-template-columns: 200px;
+  }
+
+  /*    CONTACTO     */
+  .contenedor-botones {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor-botones a {
+    margin-bottom: 20px;
+  }
+
+  .contenedor-botones a button {
+    width: 180px;
+    height: 50px;
+  }
+
+  /*    GRILLA VENTA    */
+  .grilla__informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contenedor-texto-info {
+    margin: 45px 0;
+  }
+}
